@@ -11,7 +11,7 @@ Once every millisecond I check whether the fuzzy finder is completed by checking
 
 ### Forkpy and libvterm
 A process is using `forkpty`.
-We can feed 'read' and 'write' 'stdin' and 'stdout' using the process pseudoterminal file descriptor.
+We can `read` and `write` to and from `stdin` and `stdout` using the process pseudoterminal file descriptor.
 We pass the `stdout` into a `libvterm` `VTerm` instance.
 We can then query the screen state with the `VTermScreen` instance.
 `libvterm` is what neovim uses for its terminal emulator, along with full standalone terminal emulators such as `pangoterm`. It simply parses escape codes for us, so that we have a valid TUI output to work with.
