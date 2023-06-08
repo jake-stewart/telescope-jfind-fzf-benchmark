@@ -78,12 +78,12 @@ This is to test the fuzzy finder's ability to match an item before it has even f
 Fuzzy Finders Tested
 --------------------
 ### Tested
-Telescope using `:Telescope find_files`, which reads from the replaced `fd`.
+- Telescope using `:Telescope find_files`, which reads from the replaced `fd`.
     - I tested using the fzy and fzf extensions, with noticeable performance increase.
       Maybe the bottleneck is with telescope's slow read speed. I will leave
       their results out for simplicity.
-jfind using `^F`, which reads from the replaced `fd`.
-FZY using `:lua fzy.execute('fd', fzy.sinks.edit_file)"`, which reads from the replaced `fd`.
+- jfind using `^F`, which reads from the replaced `fd`.
+- FZY using `:lua fzy.execute('fd', fzy.sinks.edit_file)"`, which reads from the replaced `fd`.
 
 ### Not Tested
  - I will not test ctrlp since it is vimscript and obviously slow.
