@@ -186,6 +186,7 @@ FZF_DEFAULT_COMMAND="fd" benchmark-vterm \
 | Fuzzy Finder | Test 3 | Test 4 | Test 5 | Average |
 |--------------|-------:|-------:|-------:|--------:|
 | Telescope    | 14,089 | 13,943 | 13,999 | 14,010  |
+| fzf-native   | 14,164 | 14,108 | 14,131 | 14,134  |
 | jfind        | 98     | 100    | 103    | 100     |
 | FZF          | 152    | 150    | 131    | 144     |
 
