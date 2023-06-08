@@ -61,7 +61,8 @@ This will remove any bottleneck involved with the input generation process.
 To make each program read my test input as easily as possible, I use the following bash script, where `test_input` is the redirected output of the python scripts:
 
 ```bash
-cat ~/benchmark/test_input
+#!/bin/bash
+cat ~/telescope-jfind-fzf-benchmark/test_input
 ```
 
 This script will be called `fd` and the fuzzy finders will not be aware that it is not the real `fd` binary.
@@ -78,6 +79,9 @@ Fuzzy Finders Tested
 --------------------
 ### Tested
 Telescope using `:Telescope find_files`, which reads from the replaced `fd`.
+    - I tested using the fzy and fzf extensions, with noticeable performance increase.
+      Maybe the bottleneck is with telescope's slow read speed. I will leave
+      their results out for simplicity.
 jfind using `^F`, which reads from the replaced `fd`.
 FZY using `:lua fzy.execute('fd', fzy.sinks.edit_file)"`, which reads from the replaced `fd`.
 
@@ -178,7 +182,7 @@ FZF_DEFAULT_COMMAND="fd" benchmark-vterm \
     --output-line=15
 ```
 
-### Results
+### Results (millseconds)
 | Fuzzy Finder | Test 3 | Test 4 | Test 5 | Average |
 |--------------|-------:|-------:|-------:|--------:|
 | Telescope    | 14,089 | 13,943 | 13,999 | 14,010  |
@@ -186,7 +190,7 @@ FZF_DEFAULT_COMMAND="fd" benchmark-vterm \
 | FZF          | 152    | 150    | 131    | 144     |
 
 jfind was:
- - 14010% as fast as Telescope
+ - 14,010% as fast as Telescope
  - 144% as fast as FZF
 
 
@@ -280,7 +284,7 @@ FZF_DEFAULT_COMMAND="fd" benchmark-vterm \
     --output-line=15
 ```
 
-### Results
+### Results (milliseconds)
 | Fuzzy Finder | Test 3 | Test 4 | Test 5 | Average |
 |--------------|-------:|-------:|-------:|--------:|
 | Telescope    | 28,722 | 29,236 | 29,011 | 28,990  |
@@ -288,7 +292,7 @@ FZF_DEFAULT_COMMAND="fd" benchmark-vterm \
 | FZF          | 162    | 164    | 167    | 164     |
 
 jfind was:
- - 16378% as fast as Telescope
+ - 16,378% as fast as Telescope
  - 92% as fast as FZF
 
 ### Test 3: Dummy Paths
@@ -386,7 +390,7 @@ FZF_DEFAULT_COMMAND="fd" benchmark-vterm \
     --output-line=15
 ```
 
-### Results
+### Results (millseconds)
 | Fuzzy Finder | Test 3 | Test 4 | Test 5 | Average |
 |--------------|-------:|-------:|-------:|--------:|
 | Telescope    | 14,491 | 14,454 | 14,443 | 14,462  |
@@ -394,7 +398,7 @@ FZF_DEFAULT_COMMAND="fd" benchmark-vterm \
 | FZF          | 166    | 155    | 189    | 170     |
 
 jfind was:
- - 13515% as fast as Telescope
+ - 13,515% as fast as Telescope
  - 158% as fast as FZF
 
 ### Test 4: Fuzzy Dummy Paths
@@ -519,7 +523,7 @@ FZF_DEFAULT_COMMAND="fd" benchmark-vterm \
     --output-line=15
 ```
 
-### Results
+### Results (millseconds)
 | Fuzzy Finder | Test 3 | Test 4 | Test 5 | Average |
 |--------------|-------:|-------:|-------:|--------:|
 | Telescope    | 14,606 | 14,530 | 14,569 | 14,568  |
@@ -527,12 +531,12 @@ FZF_DEFAULT_COMMAND="fd" benchmark-vterm \
 | FZF          | 160    | 171    | 150    | 160     |
 
 jfind was:
- - 13615% as fast as Telescope
+ - 13,615% as fast as Telescope
  - 150% as fast as FZF
 
 Conclusion
 ----------
-At its worst, jfind is 13515% as fast as telescope. My claim that jfind is 100x
+At its worst, jfind is 13,515% as fast as telescope. My claim that jfind is 100x
 faster than telescope is now incorrect. Jfind is over 130x faster than telescope.
 
 I am too lazy to benchmark my claim about 1/2 the memory usage of fzf.
