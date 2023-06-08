@@ -79,9 +79,8 @@ Fuzzy Finders Tested
 --------------------
 ### Tested
 - Telescope using `:Telescope find_files`, which reads from the replaced `fd`.
-    - I tested using the fzy and fzf extensions, with **no** noticeable performance increase.
-      Maybe the bottleneck is with telescope's slow read speed. I will leave
-      their results out for simplicity.
+- Telescope with `telescope-fzf-native`, using `:Telescope find_files`, which reads from the replaced `fd`.
+- FZF using `:FZF` and `FZF_DEFAULT_COMMAND=fd`, which reads from the replaced `fd`.
 - jfind using `^F`, which reads from the replaced `fd`.
 
 ### Not Tested
