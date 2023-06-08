@@ -10,11 +10,11 @@ I launch the fuzzy finder in this process, and start the timer only once neovim 
 Once every millisecond I check whether the fuzzy finder is completed by checking the terminal output.
 
 ### Forkpy and libvterm
-A process is using `forkpty`.
-We can `read` and `write` to and from `stdin` and `stdout` using the process pseudoterminal file descriptor.
-We pass the `stdout` into a `libvterm` `VTerm` instance.
+A process is created using `forkpty`.
+We can read and write to its stdin and stdout using the process pseudoterminal file descriptor.
+We pass the stdout into a libvterm `VTerm` instance.
 We can then query the screen state with the `VTermScreen` instance.
-`libvterm` is what neovim uses for its terminal emulator, along with full standalone terminal emulators such as `pangoterm`. It simply parses escape codes for us, so that we have a valid TUI output to work with.
+libvterm is what neovim uses for its terminal emulator, along with full standalone terminal emulators such as pangoterm. It simply parses escape codes for us, so that we have a valid TUI output to work with.
 
 ### Arguments
 The program takes a number of arguments:
