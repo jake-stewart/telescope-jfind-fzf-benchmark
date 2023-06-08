@@ -179,8 +179,8 @@ FZF_DEFAULT_COMMAND="fd" benchmark-vterm \
 ```
 
 ### Results
-
 | Fuzzy Finder | Test 3 | Test 4 | Test 5 | Average |
+|--------------|-------:|-------:|-------:|--------:|
 | Telescope    | 14,089 | 13,943 | 13,999 | 14,010  |
 | jfind        | 98     | 100    | 103    | 100     |
 | FZF          | 152    | 150    | 131    | 144     |
@@ -281,8 +281,8 @@ FZF_DEFAULT_COMMAND="fd" benchmark-vterm \
 ```
 
 ### Results
-
 | Fuzzy Finder | Test 3 | Test 4 | Test 5 | Average |
+|--------------|-------:|-------:|-------:|--------:|
 | Telescope    | 28,722 | 29,236 | 29,011 | 28,990  |
 | jfind        | 179    | 177    | 174    | 177     |
 | FZF          | 162    | 164    | 167    | 164     |
@@ -387,8 +387,8 @@ FZF_DEFAULT_COMMAND="fd" benchmark-vterm \
 ```
 
 ### Results
-
 | Fuzzy Finder | Test 3 | Test 4 | Test 5 | Average |
+|--------------|-------:|-------:|-------:|--------:|
 | Telescope    | 14,491 | 14,454 | 14,443 | 14,462  |
 | jfind        | 110    | 105    | 105    | 107     |
 | FZF          | 166    | 155    | 189    | 170     |
@@ -520,8 +520,8 @@ FZF_DEFAULT_COMMAND="fd" benchmark-vterm \
 ```
 
 ### Results
-
 | Fuzzy Finder | Test 3 | Test 4 | Test 5 | Average |
+|--------------|-------:|-------:|-------:|--------:|
 | Telescope    | 14,606 | 14,530 | 14,569 | 14,568  |
 | jfind        | 109    | 108    | 105    | 107     |
 | FZF          | 160    | 171    | 150    | 160     |
