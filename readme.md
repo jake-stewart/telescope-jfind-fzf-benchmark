@@ -18,13 +18,13 @@ We can then query the screen state with the `VTermScreen` instance.
 
 ### Arguments
 The program takes a number of arguments:
-    - `--setup`: A string of keys that should be sent to the pseudoterminal before the benchmark begins.
-    - `--setup-key-delay`: The delay in milliseconds between keystrokes being sent to the pseudoterminal before the benchmark begins.
-    - `--post-setup-delay`: The delay after the setup period in millseconds to ensure it is ready for benchmarking. After this delay has finished, the benchmark begins and a timer is started.
-    - `--input`: A string of keys which are sent to the pseudoterminal during the benchmark.
-    - `--input-key-delay`: The delay in milliseconds between keystrokes being sent to the pseudoterminal during the benchmark.
-    - `--output`: A string which must be found on the `VTermScreen` instance for the benchmark to conclude.
-    - `--output-line`: The line in which the string should be found.
+- `--setup`: A string of keys that should be sent to the pseudoterminal before the benchmark begins.
+- `--setup-key-delay`: The delay in milliseconds between keystrokes being sent to the pseudoterminal before the benchmark begins.
+- `--post-setup-delay`: The delay after the setup period in millseconds to ensure it is ready for benchmarking. After this delay has finished, the benchmark begins and a timer is started.
+- `--input`: A string of keys which are sent to the pseudoterminal during the benchmark.
+- `--input-key-delay`: The delay in milliseconds between keystrokes being sent to the pseudoterminal during the benchmark.
+- `--output`: A string which must be found on the `VTermScreen` instance for the benchmark to conclude.
+- `--output-line`: The line in which the string should be found.
 
 ### Program Flow
 The program flow is as follows:
