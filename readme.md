@@ -83,7 +83,6 @@ Fuzzy Finders Tested
       Maybe the bottleneck is with telescope's slow read speed. I will leave
       their results out for simplicity.
 - jfind using `^F`, which reads from the replaced `fd`.
-- FZY using `:lua fzy.execute('fd', fzy.sinks.edit_file)"`, which reads from the replaced `fd`.
 
 ### Not Tested
  - I will not test ctrlp since it is vimscript and obviously slow.
